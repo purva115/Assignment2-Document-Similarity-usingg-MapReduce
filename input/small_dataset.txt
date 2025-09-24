@@ -1,3 +1,3 @@
-Document1 This is a sample document containing words
-Document2 Another document that also has words
-Document3 Sample text with different words
+Document1 Artificial intelligence and machine learning have revolutionized modern computing by enabling systems to learn from data patterns without explicit programming for every scenario. Deep learning neural networks with multiple hidden layers show remarkable success in image recognition natural language processing and predictive analytics across healthcare finance and autonomous transportation industries.
+Document2 Cloud computing platforms provide scalable infrastructure allowing organizations to store process and analyze massive datasets without expensive hardware investments. Amazon Web Services Microsoft Azure and Google Cloud Platform offer comprehensive solutions including virtual machines databases analytics tools and artificial intelligence services with elastic scaling capabilities.
+Document3 Big data analytics examines large complex datasets to uncover hidden patterns correlations and insights for business decisions and strategic planning. Traditional database systems inadequately handle volume velocity and variety of modern data streams requiring distributed frameworks like Apache Hadoop and Apache Spark for processing petabytes across commodity hardware clusters.

@@ -17,23 +17,16 @@ public class DocumentSimilarityDriver {
         
         Configuration conf = new Configuration();
         
-        // Job 1: Extract word sets for each document
-        Job job1 = Job.getInstance(conf, "document word extraction");
-        job1.setJarByFile(DocumentSimilarityDriver.class);
+        Job job1 = Job.getInstance(conf, "document similarity calculation");
+        job1.setJar("DocumentSimilarity-0.0.1-SNAPSHOT.jar");
         job1.setMapperClass(DocumentSimilarityMapper.class);
         job1.setReducerClass(DocumentSimilarityReducer.class);
         job1.setOutputKeyClass(Text.class);
         job1.setOutputValueClass(Text.class);
         
         FileInputFormat.addInputPath(job1, new Path(args[0]));
-        Path intermediateOutput = new Path("intermediate_output");
-        FileOutputFormat.setOutputPath(job1, intermediateOutput);
+        FileOutputFormat.setOutputPath(job1, new Path(args[1]));
         
-        if (!job1.waitForCompletion(true)) {
-            System.exit(1);
-        }
-        
-        System.out.println("Job 1 completed successfully!");
-        System.exit(0);
+        System.exit(job1.waitForCompletion(true) ? 0 : 1);
     }
 }
