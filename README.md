@@ -121,21 +121,35 @@ The Reducer emits the document pair and their similarity score as the final outp
     Commit and push your results to the repository.
 
 ## Sample Input
-**Input from small_dataset.txt**
+**Input from small_dataset.txt [1000 words]**
 ```
-Document1 This is a sample document containing words
-Document2 Another document that also has words
-Document3 Sample text with different words
+Document1 Cloud computing represents a fundamental shift in how organizations deploy and manage their information technology infrastructure enabling businesses to access computing resources including servers storage databases networking software analytics and intelligence over the internet through cloud service providers rather than owning and maintaining physical data centers and servers companies can rent access to anything from applications to storage from cloud service providers the benefits of cloud computing include cost reduction scalability flexibility reliability and security organizations can scale up or down their computing resources based on demand without significant upfront investments in hardware cloud providers offer various service models including Infrastructure as a Service Platform as a Service and Software as a Service each catering to different business needs and technical requirements public clouds provide shared infrastructure while private clouds offer dedicated resources for enhanced security and control hybrid clouds combine both approaches allowing organizations to optimize workload placement based on security performance and cost considerations multi-cloud strategies involve using multiple cloud providers to avoid vendor lock-in and optimize specialized services cloud migration involves moving existing applications and data from on-premises infrastructure to cloud environments requiring careful planning assessment and execution cloud native applications are designed specifically for cloud environments utilizing microservices containerization and DevOps practices to achieve maximum scalability and resilience
+
+Document2 Machine learning has revolutionized the way we approach data analysis and pattern recognition across multiple industries this branch of artificial intelligence enables computers to learn and improve their performance on specific tasks without being explicitly programmed for each scenario machine learning algorithms can identify complex patterns in large datasets that would be impossible for humans to detect manually the three main types of machine learning are supervised learning unsupervised learning and reinforcement learning supervised learning uses labeled training data to make predictions on new unseen data unsupervised learning finds hidden patterns in data without labeled examples reinforcement learning involves agents learning optimal actions through trial and error interactions with their environment applications include recommendation systems fraud detection image recognition natural language processing and autonomous vehicles deep learning networks use multiple layers to process information hierarchically extracting increasingly complex features from raw input data convolutional neural networks excel at image processing tasks while recurrent neural networks handle sequential data such as natural language and time series feature engineering involves selecting and transforming input variables to improve model performance cross-validation techniques provide robust estimates of model performance by training and testing on different subsets of available data
+
+Document3 Data science combines statistical analysis programming skills and domain expertise to extract meaningful insights from structured and unstructured data modern data scientists must be proficient in programming languages such as Python R SQL and Java while also understanding statistical concepts machine learning algorithms and data visualization techniques the data science process typically involves data collection cleaning exploration analysis modeling and interpretation of results data scientists work with various types of data including numerical categorical text images audio and video data they use tools like Jupyter notebooks pandas numpy matplotlib scikit-learn and TensorFlow to manipulate analyze and model data the field requires strong problem-solving skills critical thinking abilities and effective communication skills to translate complex technical findings into actionable business recommendations for stakeholders and decision makers statistical methods form the foundation of data analysis while programming enables automation and scalability data visualization plays crucial role in making complex analytical results accessible and understandable to stakeholders across different levels of technical expertise exploratory data analysis helps identify patterns trends and anomalies in datasets before applying advanced modeling techniques hypothesis testing validates assumptions and ensures statistical significance of findings
+
+Document4 Big data refers to extremely large datasets that cannot be processed using traditional data processing applications due to their volume velocity and variety the three Vs of big data volume velocity and variety represent the core characteristics that distinguish big data from conventional data processing scenarios volume refers to the massive amounts of data generated every second from sources like social media sensors mobile devices and online transactions velocity describes the speed at which new data is generated and must be processed to remain relevant and useful variety encompasses the different types and formats of data including structured semi-structured and unstructured data from diverse sources organizations use big data analytics to gain competitive advantages improve operational efficiency enhance customer experiences and drive innovation through data-driven decision making processes Apache Hadoop and Spark are popular frameworks for distributed processing of big data across clusters of computers MapReduce programming model enables parallel processing of large datasets by dividing work into smaller tasks NoSQL databases provide scalable storage solutions for big data applications real-time analytics capabilities allow organizations to process and analyze streaming data as it arrives enabling immediate responses to changing conditions and emerging opportunities data lakes store vast amounts of raw data in native formats until needed for analysis
+
+Document5 Database management systems serve as the foundation for storing organizing and retrieving vast amounts of information in modern computing environments these systems provide structured approaches to data storage ensuring data integrity consistency and accessibility across multiple users and applications simultaneously relational databases use structured query language SQL to manage data stored in tables with rows and columns connected through relationships and foreign keys NoSQL databases offer alternative approaches for handling unstructured and semi-structured data including document stores key-value pairs column-family databases and graph databases database administrators must ensure optimal performance through indexing query optimization backup and recovery procedures security measures and regular maintenance activities proper database design involves normalization entity-relationship modeling and careful consideration of data types constraints and relationships between different entities and attributes modern databases support ACID properties ensuring atomicity consistency isolation and durability of transactions database replication provides high availability through synchronous and asynchronous copying of data across multiple instances distributed databases enable horizontal scaling by partitioning data across multiple servers or geographic locations in-memory databases store data in RAM for extremely fast access times while traditional disk-based databases provide persistent storage solutions
 ```
 
 ## Sample Output
 **Output from small_dataset.txt**
 ```
-"Document1, Document2 Similarity: 0.56"
-"Document1, Document3 Similarity: 0.42"
-"Document2, Document3 Similarity: 0.50"
+Document5, Document4	Similarity: 0.14
+Document5, Document3	Similarity: 0.10
+Document5, Document2	Similarity: 0.10
+Document5, Document1	Similarity: 0.13
+Document4, Document3	Similarity: 0.13
+Document4, Document2	Similarity: 0.15
+Document4, Document1	Similarity: 0.09
+Document3, Document2	Similarity: 0.13
+Document3, Document1	Similarity: 0.07
+Document2, Document1	Similarity: 0.11
+
 ```
-**Input from medium_dataset.txt**
+**Input from medium_dataset.txt [3000 words]**
 ```
 Document1 Quantum computing represents a revolutionary paradigm shift from classical computing by leveraging quantum mechanical phenomena such as superposition entanglement and quantum interference to process information in fundamentally different ways. Unlike classical bits that exist in definite states of zero or one quantum bits or qubits can exist in superposition states representing both zero and one simultaneously until measured. This property enables quantum computers to explore multiple computational paths in parallel potentially solving certain complex problems exponentially faster than classical computers including cryptography optimization machine learning and scientific simulation applications.
 Document2 Renewable energy technologies including solar photovoltaic wind power hydroelectric geothermal and biomass systems provide sustainable alternatives to fossil fuel consumption while reducing greenhouse gas emissions and environmental degradation. Solar panels convert sunlight directly into electricity through photovoltaic cells while wind turbines harness kinetic energy from moving air masses to generate power. Energy storage systems including lithium-ion batteries pumped hydro storage and emerging technologies like hydrogen fuel cells address intermittency challenges enabling grid stability and reliable power delivery from renewable sources across diverse geographic and climatic conditions.
@@ -350,6 +364,7 @@ Document18, Document17	Similarity: 0.03
 Document19, Document16	Similarity: 0.07
 Document19, Document17	Similarity: 0.03
 Document16, Document17	Similarity: 0.10
+
 
 ```
 **Input from large_dataset.txt**
@@ -1634,6 +1649,7 @@ Document1, Document28	Similarity: 0.04
 Document29, Document27	Similarity: 0.01
 Document29, Document28	Similarity: 0.05
 Document27, Document28	Similarity: 0.05
+
 
 ```
 ## License
