@@ -1652,6 +1652,8 @@ Document27, Document28	Similarity: 0.05
 
 
 ```
+## My Key Observations
+The execution time was directly proportional to the size of the dataset and took longer execution speed when executed on single node in comparison to 3 nodes
 ## License
 This project is licensed under the MIT License.
 
